@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: purple;
+}
+
+#iphone-container {
+    position: relative;
+    width: 375px; /* Set the width of iPhone 13 */
+    height: 812px; /* Set the height of iPhone 13 */
+    margin: 50px auto; /* Adjust margin as needed */
+    background-color: white; /* Set iPhone background color */
+    border-radius: 30px; /* Add rounded corners to mimic iPhone */
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+}
+
+/* Add iPhone screen content styles */
+#screen-content {
+    padding: 20px;
+}
