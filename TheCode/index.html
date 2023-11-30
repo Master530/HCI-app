@@ -1,41 +1,40 @@
-<!doctype html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Home Screen</title>
-    </head>
-    <style>
-        .header_container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-        }
-        img {
-            height: auto;
-            width: auto; /* ie8 */
-        }
-    </style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--links here-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Home Screen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+    
     <body>
-        <header>
+    <div id="iphone-container"> <!-- phone display frame -->
+        <div id="screen-content"> <!-- All content inside of here -->
+            <header> <!-- Top navigation icon -->
             <div class="header_container">
                 <div class="header_item menu">
                     <img src="images/hamburger.png" />
                 </div>
                 <div class="header_item logo" style="align-self: center">
-                    <img src="images/logo.png" />
+                    <a href="index.html"><img src="images/logo.png"/></a>
                 </div>
                 <div class="header_item chat">
-                    <img
+                    <a href="Chat.html"><img
                         src="images/messenger.png"
                         alt="Message icons created by Freepik - Flaticon"
-                        style="max-width: 10%"
-                    />
+                        style="max-width: 40%"
+                    /></a>
+                    
                 </div>
             </div>
         </header>
-        <div>
-            <h1>Vermont Cares</h1>
-            <p>This is a test</p>
+        <hr>
+            <!-- main app content here -->
+            <h1>VT Cares</h1>
+            <p>Testing size</p>
         </div>
-    </body>
+        <!-- No content here/below -->
+    </div>
+</body>
 </html>

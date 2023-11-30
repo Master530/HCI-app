@@ -19,3 +19,15 @@ body {
 #screen-content {
     padding: 20px;
 }
+
+.header_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+.header_item{
+    margin: 0 10px;
+}
+
