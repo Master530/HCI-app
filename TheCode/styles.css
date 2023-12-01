@@ -29,5 +29,13 @@ body {
 
 .header_item{
     margin: 0 10px;
+
+}#rxMessage{
+    padding: 10px;
+    background-color: #f2f2f2;
 }
 
+#SxPopup{
+    background-color: #f2f2f2;
+    
+}
