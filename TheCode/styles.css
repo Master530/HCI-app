@@ -6,16 +6,15 @@ body {
 
 #iphone-container {
     position: relative;
-    width: 375px; /* Set the width of iPhone 13 */
-    height: 812px; /* Set the height of iPhone 13 */
+    width: 375px; /* width of iPhone 13 */
+    height: 812px; /* height of iPhone 13 */
     margin: 50px auto; /* Adjust margin as needed */
-    background-color: white; /* Set iPhone background color */
-    border-radius: 30px; /* Add rounded corners to mimic iPhone */
+    background-color: lightblue; /* Set iPhone background color */
+    border-radius: 30px; /* Added rounded corners to mimic iPhone & android screen */
     overflow: hidden;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-/* Add iPhone screen content styles */
 #screen-content {
     padding: 20px;
 }
@@ -30,12 +29,133 @@ body {
 .header_item{
     margin: 0 10px;
 
-}#rxMessage{
+}#RxMessage{
     padding: 10px;
+    margin-top: 50px;
     background-color: #f2f2f2;
 }
 
+#SxPopup input{
+    display: block;
+
+}
+
 #SxPopup{
+    border: 3px solid black;
+}
+
+#SxPopup h3{
+    font-size: 40px;
+    align-items: center;
+    border: 2px dashed red;
+}
+
+#SxPopup button {
+    margin: 10px;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#SxPopup button:active,
+#SxPopup button.selected {
+    background-color: black;
+    color: white;
+}
+
+#SxPopup button:hover {
+    background-color: #333; /* Darker color on hover */
+    color: white;
+}
+
+
+#messgeBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+#messageInput {
+    margin-top: 230px;
+    flex-grow: 1;
+    margin-right: 10px;
+    padding: 17px;
     background-color: #f2f2f2;
-    
+}
+
+#display-keyboard {
+    display: grid;
+    grid-template-columns: repeat(5, 3fr);
+    gap: 7px;
+    padding: 15px;
+    background-color: blue;
+}
+
+#display-keyboard button {
+    padding: 10px;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#seperator{
+    font-size: 20px;
+    font-weight: 10px;
+    color: red;
+}
+
+
+#mobileServiceBox{
+    border: 2px solid black;
+    padding: 10px;
+    background-color: lightskyblue;
+}
+
+
+
+#mobileServiceBox button{
+    width: 100%;
+    height: 50px;
+    background-color: lightsalmon;
+    cursor: pointer;
+}
+
+#mobileServiceBox button:hover{
+    background-color: #333;
+    color: white;
+}
+
+#mobileServiceBox h2{
+    color: navy;
+    margin-left: 69px;
+}
+
+#mobileServiceChatBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 45px;
+    height: 55px;
+    cursor: pointer;
+    border: 3px black solid;
+    padding: 10px;
+    background-color: lightskyblue;
+}
+
+#mobileServiceChatBox:hover{
+    background-color: lightgray;
+    color: white;
+   
+}
+
+#chatIcon2{
+    float: right;
+   /* margin-left: 195px;*/
+}
+
+.chatIcons{
+    margin: 3px;
 }
