@@ -256,3 +256,45 @@ body {
     max-width: 125%;
     cursor: pointer;
 }
+        
+
+#hoursLocationBox{
+    border: 2px solid black;
+    padding: 10px;
+    background-color: lightskyblue;
+}
+
+#hoursLocationBox button{
+    width: 100%;
+    height: 50px;
+    background-color: lightsalmon;
+    cursor: pointer;
+}
+
+#hoursLocationBox button:hover{
+    background-color: #333;
+    color: white;
+}
+
+#hoursLocationBox h2{
+    color: navy;
+    margin-left: 69px;
+}
+
+#hoursLocationChatBox{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 45px;
+    height: 55px;
+    cursor: pointer;
+    border: 3px black solid;
+    padding: 10px;
+    background-color: lightskyblue;
+}
+
+#mobileServiceChatBox:hover{
+    background-color: lightgray;
+    color: white;
+   
+}
