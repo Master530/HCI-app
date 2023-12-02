@@ -191,11 +191,17 @@ body {
 
 #chatIcon2{
     float: right;
-   /* margin-left: 195px;*/
 }
 
 .chatIcons{
     margin: 3px;
+}
+
+#serviceInfoButton{
+    max-width: 25%;
+    max-height: 40%;
+    float: right;
+    margin-left: 2px;
 }
 
 #pushUp h2{
