@@ -35,12 +35,10 @@ body {
     background-color: #f2f2f2;
 }
 
-#SxPopup input{
-    display: block;
-
-}
-
 #SxPopup{
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
     border: 3px solid black;
 }
 
@@ -71,6 +69,48 @@ body {
     color: white;
 }
 
+#locationsAvailable{
+    display: flex;
+    flex-direction: column;
+    margin-top: 75px;
+    border: 3px solid black;
+}
+
+#locationsAvailable h3{
+    font-size: 35px;
+    align-items: center;
+    border: 2px solid yellow;
+}
+
+#locationsAvailable button {
+    margin: 10px;
+    padding: 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+}
+
+#locationsAvailable button:active,
+#locationsAvailable button.selected {
+    background-color: black;
+    color: white;
+}
+
+#locationsAvailable button:hover {
+    background-color: #333; /* Darker color on hover */
+    color: white;
+}
+
+#serviceSubmitButton{
+    width: 94%;
+    color: navy;
+}
+
+.option{
+    width: 94%;
+}
 
 #messgeBox {
     display: flex;
@@ -158,4 +198,11 @@ body {
 
 .chatIcons{
     margin: 3px;
+}
+
+
+#returnButton{
+    align-items: center;
+    margin-top: 300px;
+    max-width: 95%;
 }
