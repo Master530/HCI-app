@@ -245,9 +245,16 @@ body {
 
 #returnButton{
     align-items: center;
-    margin-top: 300px;
-    max-width: 95%;
+    margin-top: 100px;;
+    width: 100%;
+    cursor: pointer;
+    background-color: lightskyblue;
 }
+
+#returnButton:hover{
+    background-color: #333;
+}
+
 
 
 #map{
