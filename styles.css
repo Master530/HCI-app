@@ -13,6 +13,7 @@ body {
 
 .container {
     display: grid;
+    align-content: stretch;
     height: calc(100vh - 19px);
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 0.2fr 0.1fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.2fr 1.2fr;
@@ -30,13 +31,6 @@ body {
     padding: 5px;
 }
 
-.line {
-    grid-area: line;
-    border-bottom: 7px solid var(--dark);
-    background-color: var(--dark);
-    width: 105%;
-}
-
 .logo {
     grid-area: logo;
     align-self: center;
@@ -51,8 +45,11 @@ body {
     max-width: 70%;
 }
 
-.location {
-    grid-area: hours;
+.line {
+    grid-area: line;
+    border-bottom: 7px solid var(--dark);
+    background-color: var(--dark);
+    width: 105%;
 }
 
 .mobile {
@@ -63,10 +60,45 @@ body {
     background-color: var(--med);
     border: 7px solid var(--dark);
     border-radius: 30px;
+    text-align: center;
+}
+
+.mobile h2 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.button_group button{
+    background-color: var(--med);
+    border: none;
+    width: 100%;
+}
+
+.mobile:nth_child(n) {
+    height: 100vh;
+    background: red;
+    width: 100%;
 }
 
 .long_chat {
     grid-area: chat2;
+}
+
+.location {
+    grid-area: hours;
+}
+
+.vids {
+    grid-area: vids;
+}
+
+.emergency {
+    grid-area: emergency;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
 }
 
 #iphone-container {
