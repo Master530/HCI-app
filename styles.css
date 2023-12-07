@@ -1,11 +1,24 @@
+:root {
+    --dark: #55215f;
+    --med: #BBA3C0;
+    --light: #decde0;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--light);
+    border: 5px var(--dark) solid;
+    border-radius: 10px;
+}
+
 .container {
     display: grid;
-    height: 100vh;
+    height: calc(100vh - 19px);
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 0.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
-    grid-gap: 0.2rem;
+    grid-template-rows: 0.2fr 0.1fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.2fr 1.2fr;
     grid-template-areas:
         "left-head logo logo right-head"
+        "line line line line"
         "mobile mobile mobile mobile"
         "mobile mobile mobile mobile"
         "mobile mobile mobile mobile"
@@ -14,8 +27,14 @@
         "chat2 chat2 chat2 chat2"
         "hours vids vids emergency";
     justify-items: center;
-    border-color: #55215f;
-    border: 2px;
+    padding: 5px;
+}
+
+.line {
+    grid-area: line;
+    border-bottom: 7px solid var(--dark);
+    background-color: var(--dark);
+    width: 105%;
 }
 
 .logo {
@@ -38,16 +57,16 @@
 
 .mobile {
     grid-area: mobile;
+    margin: 5%;
+    max-width: 90%;
+    width: 100%;
+    background-color: var(--med);
+    border: 7px solid var(--dark);
+    border-radius: 30px;
 }
 
 .long_chat {
     grid-area: chat2;
-}
-
-body {
-    margin: 0.2rem;
-    padding: 0;
-    background-color: #decde0;
 }
 
 #iphone-container {
