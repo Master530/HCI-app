@@ -7,49 +7,39 @@
     <title>Home Screen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-    
+
     <body>
-    <div id="iphone-container"> <!-- phone display frame -->
-        <div id="screen-content"> <!-- All content inside of here -->
-            <header> <!-- Top navigation icon -->
-            <div class="header_container">
-                <div class="header_item menu">
-                    <a href="bye.html"><img src="images/arrow-back.png" style="max-width: 60%;"" /></a>
-                    
-                </div>
+        <div class="container">
                 <div class="header_item logo" style="align-self: center">
-                    <a href="index.html"><img src="images/logo.png"/></a>
+                    <a href="index.html"><img src="images/logo.png" style="max-width: 70%;"/></a>
                 </div>
                 <div class="header_item chat">
                     <a href="Chat.html"><img
+                        class="chat"
                         src="images/messenger.png"
                         alt="Message icons created by Freepik - Flaticon"
-                        style="max-width: 40%"
+                        style="float:right;"
                     /></a>
-                    
+
                 </div>
-            </div>
-        </header>
 
-        <hr>
 
-        <div id="locaitonDetails">
-            <p>Location: Johnsbury | Hours: 9am - 9pm | <a href="chatLocationChange.html"><button>Change</button></a> </p> 
+        <div id="locaitonDetails" class="location">
+            <p>Location: Johnsbury | Hours: 9am - 9pm | <a href="chatLocationChange.html"><button>Change</button></a> </p>
         </div>
 
-        <hr>
-
+        <div class="mobile">
             <a href="burlingtonMobileServiceShowCase.html"><button>Mobile Service #1</button></a>
 
             <a href="barreMobileServiceShowCase.html"><button>Mobile Service #2</button></a>
 
             <a href="officeHoursAndLocations.html"><button>Hours & Locations</button></a>
+        </div>
 
-            <iframe src="https://giphy.com/embed/Rsp9jLIy0VZOKlZziw" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/nordiskfilmfinland-nicolas-cage-nick-suurenmoisen-lahjakkuuden-sietmtn-taakka-Rsp9jLIy0VZOKlZziw">via GIPHY</a></p>
-
+        <div class="long_chat">
             <a href="Chat.html">
             <div id="pushUp">
- 
+
                 <img class="chatIcons" src="images/messenger.png"style="max-width: 15%"/>
 
                 <p>Chat With Us</p>
@@ -57,9 +47,12 @@
                 <img class="chatIcons" id="chatIcon2" src="images/messenger.png"style="max-width: 15%" />
 
             </div>
-        </a>
-            
+
+            </a>
         </div>
+
+        </div>
+    </div>
         <!-- No content here/below -->
     </div>
 </body>

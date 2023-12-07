@@ -1,7 +1,53 @@
+.container {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr;
+    grid-gap: 0.2rem;
+    grid-template-areas:
+        "left-head logo logo right-head"
+        "mobile mobile mobile mobile"
+        "mobile mobile mobile mobile"
+        "mobile mobile mobile mobile"
+        "events events rec_video rec_video"
+        "events events rec_video rec_video"
+        "chat2 chat2 chat2 chat2"
+        "hours vids vids emergency";
+    justify-items: center;
+    border-color: #55215f;
+    border: 2px;
+}
+
+.logo {
+    grid-area: logo;
+    align-self: center;
+    max-width: 100%;
+}
+
+.chat {
+    display: flex;
+    grid-area: right-head;
+    justify-content: center;
+    align-items: center;
+    max-width: 70%;
+}
+
+.location {
+    grid-area: hours;
+}
+
+.mobile {
+    grid-area: mobile;
+}
+
+.long_chat {
+    grid-area: chat2;
+}
+
 body {
-    margin: 0;
+    margin: 0.2rem;
     padding: 0;
-    background-color: purple;
+    background-color: #decde0;
 }
 
 #iphone-container {
@@ -19,30 +65,30 @@ body {
     padding: 20px;
 }
 
-.header_container{
+.header_container {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 10px;
 }
 
-.header_item{
+.header_item {
     margin: 0 10px;
-
-}#RxMessage{
+}
+#RxMessage {
     padding: 10px;
     margin-top: 50px;
     background-color: #f2f2f2;
 }
 
-#SxPopup{
+#SxPopup {
     display: flex;
     flex-direction: column;
     margin-top: 75px;
     border: 3px solid black;
 }
 
-#SxPopup h3{
+#SxPopup h3 {
     font-size: 40px;
     align-items: center;
     border: 2px dashed red;
@@ -69,14 +115,14 @@ body {
     color: white;
 }
 
-#locationsAvailable{
+#locationsAvailable {
     display: flex;
     flex-direction: column;
     margin-top: 75px;
     border: 3px solid black;
 }
 
-#locationsAvailable h3{
+#locationsAvailable h3 {
     font-size: 35px;
     align-items: center;
     border: 2px solid yellow;
@@ -103,12 +149,12 @@ body {
     color: white;
 }
 
-#serviceSubmitButton{
+#serviceSubmitButton {
     width: 94%;
     color: navy;
 }
 
-.option{
+.option {
     width: 94%;
 }
 
@@ -141,37 +187,36 @@ body {
     cursor: pointer;
 }
 
-#seperator{
+#seperator {
     font-size: 20px;
     font-weight: 10px;
     color: red;
 }
 
-
-#mobileServiceBox{
+#mobileServiceBox {
     border: 2px solid black;
     padding: 10px;
     background-color: lightskyblue;
 }
 
-#mobileServiceBox button{
+#mobileServiceBox button {
     width: 100%;
     height: 50px;
     background-color: lightsalmon;
     cursor: pointer;
 }
 
-#mobileServiceBox button:hover{
+#mobileServiceBox button:hover {
     background-color: #333;
     color: white;
 }
 
-#mobileServiceBox h2{
+#mobileServiceBox h2 {
     color: navy;
     margin-left: 50px;
 }
 
-#mobileServiceChatBox{
+#mobileServiceChatBox {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -183,52 +228,48 @@ body {
     background-color: lightskyblue;
 }
 
-#mobileServiceChatBox:hover{
+#mobileServiceChatBox:hover {
     background-color: lightgray;
     color: white;
-   
 }
 
-#chatIcon2{
+#chatIcon2 {
     float: right;
 }
 
-.chatIcons{
+.chatIcons {
     margin: 3px;
 }
 
-#serviceInfoButton{
+#serviceInfoButton {
     max-width: 25%;
     max-height: 40%;
     float: right;
     margin-left: 2px;
 }
 
-#pushUp h2{
+#pushUp h2 {
     color: navy;
     margin-left: 69px;
 }
 
-#pushUp{
+#pushUp {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     margin-top: 10px;
-    height: 35px;
     cursor: pointer;
     border: 3px black solid;
     padding: 10px;
     background-color: lightskyblue;
 }
 
-#pushUp:hover{
+#pushUp:hover {
     background-color: lightgray;
     color: white;
-   
 }
 
-#directionButton{
-    
+#directionButton {
     max-height: 25px;
     max-width: 100%;
     background-color: lightsalmon;
@@ -236,59 +277,54 @@ body {
     margin-bottom: 5px;
 }
 
-#directionButton:hover{
+#directionButton:hover {
     background-color: #333;
     color: white;
 }
 
-
-
-#returnButton{
+#returnButton {
     align-items: center;
-    margin-top: 100px;;
+    margin-top: 100px;
     width: 100%;
     cursor: pointer;
     background-color: lightskyblue;
 }
 
-#returnButton:hover{
+#returnButton:hover {
     background-color: #333;
 }
 
-
-
-#map{
+#map {
     align-items: center;
     max-height: 275px;
     max-width: 125%;
     cursor: pointer;
 }
-        
 
-#hoursLocationBox{
+#hoursLocationBox {
     border: 2px solid black;
     padding: 10px;
     background-color: lightskyblue;
 }
 
-#hoursLocationBox button{
+#hoursLocationBox button {
     width: 100%;
     height: 50px;
     background-color: lightsalmon;
     cursor: pointer;
 }
 
-#hoursLocationBox button:hover{
+#hoursLocationBox button:hover {
     background-color: #333;
     color: white;
 }
 
-#hoursLocationBox h2{
+#hoursLocationBox h2 {
     color: navy;
     margin-left: 20px;
 }
 
-#hoursLocationChatBox{
+#hoursLocationChatBox {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -300,8 +336,7 @@ body {
     background-color: lightskyblue;
 }
 
-#mobileServiceChatBox:hover{
+#mobileServiceChatBox:hover {
     background-color: lightgray;
     color: white;
-   
 }
