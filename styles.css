@@ -13,7 +13,7 @@ body {
 .container {
     display: grid;
     align-content: stretch;
-    height: calc(100vh - 15px);
+    height: calc(100vh - 5rem);
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 0.2fr 0.1fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.2fr 1.2fr;
     grid-template-areas:
@@ -27,14 +27,13 @@ body {
         "chat2 chat2 chat2 chat2"
         "hours vids vids emergency";
     justify-items: center;
-    padding: 5px;
+    padding: .5rem;
     row-gap: .5rem;
 }
 
 .logo {
     grid-area: logo;
     align-self: center;
-    max-width: 100%;
 }
 
 .chat {
@@ -53,12 +52,16 @@ body {
 }
 
 .mobile, .events, .rec_video, .long_chat, .location, .vids, .emergency{
-    margin: 1%;
-    max-width: 90%;
+    max-width: calc(100% - 2rem) ;
     width: 100%;
     background-color: var(--med);
     border: var(--inner_border) solid var(--dark);
-    border-radius: 30px;
+    border-radius: 1rem;
+    margin: .5rem;
+}
+
+.logo{
+    max-width: 5rem;
 }
 
 .mobile {
@@ -76,9 +79,10 @@ body {
     background-color: pink;
     border: calc(var(--inner_border) / 2) solid var(--dark);
     width: 90%;
-    margin-top: 1rem;
+    margin-top: .1rem;
+    padding:0;
     padding-top: 1rem;
-    padding-bottom: 0rem;
+    margin-bottom: 1rem;
 }
 
 .button_group button{
@@ -97,10 +101,6 @@ body {
     background-color: var(--med);
 }
 
-[eta]{
-    align-items: center;
-}
-
 [eta]::after{
     content: attr(eta);
     position:relative;
@@ -117,9 +117,9 @@ body {
 }
 
 .rec_video {
+    display:flex;
     grid-area: rec_video;
 }
-
 
 .long_chat {
     grid-area: chat2;
@@ -127,6 +127,13 @@ body {
 
 .location {
     grid-area: hours;
+    display: flex;
+}
+
+.location h2{
+    margin: 0;
+    font-size: .5rem;
+    padding-bottom: 1rem;
 }
 
 .vids {
@@ -145,6 +152,59 @@ body {
     background: none;
     border: none;
 }
+
+
+.container:has(.rec_video input:checked){
+    grid-template-areas:
+        "left-head logo logo right-head"
+        "line line line line"
+        "mobile mobile mobile mobile"
+        "mobile mobile mobile mobile"
+        "rec_video rec_video rec_video rec_video"
+        "rec_video rec_video rec_video rec_video"
+        "rec_video rec_video rec_video rec_video"
+        "chat2 chat2 chat2 chat2"
+        "hours events vids emergency";
+}
+.container:has(.location input:checked){
+    grid-template-areas:
+        "left-head logo logo right-head"
+        "line line line line"
+        "hours hours hours hours"
+        "hours hours hours hours"
+        "hours hours hours hours"
+        "hours hours hours hours"
+        "hours hours hours hours"
+        "hours hours hours hours"
+        "chat2 chat2 chat2 chat2"
+        ;
+}
+
+.container:has(.rec_video input:checked) .mobile h2{
+    font-size: 1rem;
+}
+.container:has(.rec_video input:checked) .mobile{
+    display: flex;
+    vertical-align: auto;
+}
+
+.container:has(.location input:checked) > :not(.location){
+    display:none;
+    visibility: hidden;
+}
+.container:has(.location input:checked) .long_chat{
+    display:block;
+    visibility: visible;
+}
+.container:has(.location input:checked) .header_item{
+    display:block;
+    visibility: visible;
+}
+.container:has(.location input:checked) .more_loc{
+    display:block;
+    visibility: visible;
+}
+
 
 #iphone-container {
     position: relative;
@@ -402,7 +462,17 @@ body {
 #hoursLocationBox {
     border: 2px solid black;
     padding: 10px;
-    background-color: lightskyblue;
+
+}
+
+.more_loc {
+    display: none;
+    visibility: hidden;
+}
+
+.location:has(input:checked) .more_loc{
+    display: block;
+    visibility: visible;
 }
 
 #hoursLocationBox button {
