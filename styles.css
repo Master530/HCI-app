@@ -2,19 +2,18 @@
     --dark: #55215f;
     --med: #BBA3C0;
     --light: #decde0;
+    --inner_border: .3rem;
 }
 body {
     margin: 0;
     padding: 0;
     background-color: var(--light);
-    border: 5px var(--dark) solid;
-    border-radius: 10px;
 }
 
 .container {
     display: grid;
     align-content: stretch;
-    height: calc(100vh - 19px);
+    height: calc(100vh - 15px);
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 0.2fr 0.1fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.2fr 1.2fr;
     grid-template-areas:
@@ -53,64 +52,90 @@ body {
     width: 105%;
 }
 
-.mobile {
-    grid-area: mobile;
-    margin: 5%;
-max-width: 90%;
+.mobile, .events, .rec_video, .long_chat, .location, .vids, .emergency{
+    margin: 1%;
+    max-width: 90%;
     width: 100%;
     background-color: var(--med);
-    border: 7px solid var(--dark);
+    border: var(--inner_border) solid var(--dark);
     border-radius: 30px;
+}
+
+.mobile {
+    grid-area: mobile;
     text-align: center;
 }
 
 .mobile h2 {
     margin: 0;
     font-size: 2rem;
-}
-
-.button_group button{
-    background-color: var(--med);
-    border: none;
-    width: 100%;
-    padding: 1rem;
     padding-bottom: 1rem;
-     border-radius: 30px;
 }
 
-.request button{
+.button_group .request{
     background-color: pink;
-    border: 7px solid var(--dark);
+    border: calc(var(--inner_border) / 2) solid var(--dark);
     width: 90%;
-    padding: 1rem;
+    margin-top: 1rem;
+    padding-top: 1rem;
     padding-bottom: 0rem;
 }
 
+.button_group button{
+    border: none;
+    width: 100%;
+    padding: 0rem;
+    padding-bottom: .5rem;
+    border-radius: 10px;
+    vertical-align: center;
+}
+
+.button_group a button:not(.request){
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "van town address";
+    background-color: var(--med);
+}
+
+[eta]{
+    align-items: center;
+}
+
+[eta]::after{
+    content: attr(eta);
+    position:relative;
+    right:2rem;
+    grid-area: van;
+    color: black;
+}
+.button_group img{
+    grid-area: van;
+    place-self: center;
+}
+.events {
+    grid-area: events;
+}
+
+.rec_video {
+    grid-area: rec_video;
+}
+
+
 .long_chat {
     grid-area: chat2;
-    max-width: 90%;
-    width: 100%;
-    margin: 5%;
-    background-color: var(--med);
-    border: 7px solid var(--dark);
-    border-radius: 30px;
 }
 
 .location {
     grid-area: hours;
-    background-color: var(--med);
-    border: 7px solid var(--dark);
-    border-radius: 30px;
 }
 
 .vids {
     grid-area: vids;
-    border-radius: 30px;
 }
 
 .emergency {
     grid-area: emergency;
-    border-radius: 30px;
+    background-color: pink;
 }
 
 .full {
