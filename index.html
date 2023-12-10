@@ -49,11 +49,19 @@
             </a>
         </div>
         <div class="full_chat">
-            <div id="messgeBox">
-                <div class="messages">
+            <div class="message_history"></div>
+                <div class="message_prompt">
+                    <h3>How can we help?</h3>
+                    <div class="help_options">
+                        <button class="option"><input type="checkbox"  id="narcan">Narcan</button>
+                        <button class="option"><input type="checkbox"  id="hivTest">HIV Test</button>
+                        <button class="option"><input type="checkbox"  id="testStrips">Test Strips</button>
+                        <button class="option"><input type="checkbox" id="sterileSupplies">Sterile Supplies</button>
+                    </div>
+                        <button class="send_options" type="submit"><input type="checkbox">Submit</button>
                 </div>
-                <input class="chat_box" type="text" placeholder="Your message...">
-            </div>
+                <textarea autofocus class="chat_box" type="text" placeholder="Your message..." ></textarea>
+
         </div>
         <div id="locaitonDetails" class="location"><input type="checkbox"/>
             <button class="full"><a href="officeHoursAndLocations.html"><img src="images/clock.jpeg"style="max-width: 1rem"/><h2>Office Hours & Locations</h2>
