@@ -51,7 +51,7 @@ body {
     width: 105%;
 }
 
-.mobile, .events, .rec_video, .long_chat, .location, .vids, .emergency{
+.mobile, .events, .rec_video, .long_chat, .location, .vids, .emergency, .full_chat{
     max-width: calc(100% - 2rem) ;
     width: 100%;
     background-color: var(--med);
@@ -153,7 +153,7 @@ body {
     border: none;
 }
 
-
+/*reccomended video playing styles*/
 .container:has(.rec_video input:checked){
     grid-template-areas:
         "left-head logo logo right-head"
@@ -166,6 +166,18 @@ body {
         "chat2 chat2 chat2 chat2"
         "hours events vids emergency";
 }
+.container:has(.rec_video input:checked) .mobile h2{
+    font-size: 1rem;
+}
+.container:has(.rec_video input:checked) .mobile{
+    display: flex;
+    vertical-align: auto;
+}
+.rec_video input:checked::after{
+    content:"Video Playing";
+}
+
+/*Styles for extended hours view*/
 .container:has(.location input:checked){
     grid-template-areas:
         "left-head logo logo right-head"
@@ -180,15 +192,6 @@ body {
         "chat2 chat2 chat2 chat2"
         ;
 }
-
-.container:has(.rec_video input:checked) .mobile h2{
-    font-size: 1rem;
-}
-.container:has(.rec_video input:checked) .mobile{
-    display: flex;
-    vertical-align: auto;
-}
-
 .container:has(.location input:checked) > :not(.location){
     display:none;
     visibility: hidden;
@@ -204,27 +207,74 @@ body {
 .container:has(.location input:checked) .more_loc{
     display:flex;
     font-size: 2cqh;
-
     align-items: flex-start;
+    justify-content: center;
     flex-direction: column;
     padding: 1rem;
     margin:0;
     text-align: center;
     visibility: visible;
 }
-
 .container:has(.location input:checked) .location h2{
     font-size: 2rem;
 }
-
 .more_loc {
     display: none;
     visibility: hidden;
     max-width: 90%;
 }
-
 .location:has(input:checked) .more_loc{
     display: block;
+    visibility: visible;
+}
+
+/*Styles for chat view*/
+.full_chat {
+    max-width: calc(100% - 2rem) ;
+    width: 100%;
+    background-color: var(--med);
+    border: var(--inner_border) solid var(--dark);
+    border-radius: 1rem;
+    margin: .5rem;
+    display: none;
+    visibility: hidden;
+}
+.container:has(.open_chat input:checked){
+    grid-template-areas:
+        "left-head logo logo right-head"
+        "line line line line"
+        "chat chat chat chat"
+        "chat chat chat chat"
+        "chat chat chat chat"
+        "chat chat chat chat"
+        "chat chat chat chat"
+        "chat chat chat chat"
+        "chat chat chat chat"
+        "chat chat chat chat"
+        ;
+}
+.container:has(.open_chat input:checked) checkbox:not(:checked){
+    display:none;
+    visibility: hidden;
+}
+.container:has(.open_chat input:checked) #pushUp{
+    display:none;
+    visibility: hidden;
+}
+.container:has(.open_chat input:checked) > :not(.full_chat){
+    display:none;
+    visibility: hidden;
+}
+.container:has(.open_chat input:checked) .header_item{
+    display:block;
+    visibility: visible;
+}
+.container:has(.open_chat input:checked) .full_chat{
+    grid-area: chat;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     visibility: visible;
 }
 
@@ -339,12 +389,11 @@ body {
 #messgeBox {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: self-end;
     padding: 10px;
 }
 
 #messageInput {
-    margin-top: 230px;
     flex-grow: 1;
     margin-right: 10px;
     padding: 17px;

@@ -13,7 +13,7 @@
                 <div class="header_item logo" style="align-self: center">
                     <a href="index.html"><img class="logo" src="images/logo.png" style="max-width: 5rem;"/></a>
                 </div>
-                <div class="header_item chat">
+                <div class="header_item chat open_chat"><input type="checkbox">
                     <a href="Chat.html"><img
                         class="chat"
                         src="images/messenger.png"
@@ -29,12 +29,12 @@
             <a href="burlingtonMobileServiceShowCase.html" class="arrived"><button><img src="images/green_van.png"/>Burlington</button></a>
 
             <a href="barreMobileServiceShowCase.html" ><button><div eta="15"><img src="images/yellow_van.png"/></div>Barre</button></a>
-            <a href="Chat.html"><button class="request">Request Services</button></a>
+            <a href="Chat.html"><button class="request open_chat"><input type="checkbox">Request Services</button></a>
         </div>
 
         <div class="events"><button class="full"><h2><img src="images/calander.png" style="max-width:2rem; float:left;"/>Events</h2></button></div>
         <div class="rec_video"><input type="checkbox"/><button class="full"><img src="images/play.png" style="max-width:5rem"/></button></div>
-        <div class="long_chat">
+        <div class="long_chat open_chat"><input type="checkbox">
             <a href="Chat.html">
             <div id="pushUp" >
 
@@ -48,11 +48,18 @@
 
             </a>
         </div>
+        <div class="full_chat">
+            <div id="messgeBox">
+                <div class="messages">
+                </div>
+                <input class="chat_box" type="text" placeholder="Your message...">
+            </div>
+        </div>
         <div id="locaitonDetails" class="location"><input type="checkbox"/>
             <button class="full"><a href="officeHoursAndLocations.html"><img src="images/clock.jpeg"style="max-width: 1rem"/><h2>Office Hours & Locations</h2>
             <div class="more_loc">
                 <div>
-                    <a target="_blank" href="https://maps.app.goo.gl/HnmQdDLsjmM8MD8j6"><b> Saint Johnsbury:</b>
+                    <a target="_blank" href="https://maps.app.goo.gl/HnmQdDLsjmM8MD8j6"><b> Saint Johnsbury:</b><br>
                         1091 Hospital
                         Drive, Suite 2,
                         St. Johnsbury, VT
@@ -66,7 +73,7 @@
                 </div>
                 <br>
                 <div>
-                    <a target="_blank" href="https://maps.app.goo.gl/p8XDRUzLwxVodDkN9">  <b> Rutland:</b>
+                    <a target="_blank" href="https://maps.app.goo.gl/p8XDRUzLwxVodDkN9">  <b> Rutland:</b><br>
                     131 Woodstock Avenue,
                     Suite 3, Rutland,
                     VT 05701
@@ -79,7 +86,7 @@
                 </div>
                 <br>
                 <div>
-                    <a target="_blank" href="https://maps.app.goo.gl/WJipgvt6UxmuxtgLA">  <b> Burlington:</b>
+                    <a target="_blank" href="https://maps.app.goo.gl/WJipgvt6UxmuxtgLA">  <b> Burlington:</b><br>
                         187 Saint Paul Street,
                         Burlington,VT 05402
                     </a>
@@ -88,7 +95,7 @@
                 </div>
                 <br>
                 <div>
-                    <a target="_blank" href="https://maps.app.goo.gl/rVKu4VyU7tFzopy87"><b> Barre:</b>
+                    <a target="_blank" href="https://maps.app.goo.gl/rVKu4VyU7tFzopy87"><b> Barre:</b><br>
                         51 Church Street,
                         Barre,VT 05641
                     </a>
