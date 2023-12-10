@@ -206,8 +206,8 @@ body {
 }
 .container:has(.location input:checked) .more_loc{
     display:flex;
-    font-size: 2cqh;
-    align-items: flex-start;
+    font-size: 3cqmin;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     padding: 1rem;
@@ -216,7 +216,7 @@ body {
     visibility: visible;
 }
 .container:has(.location input:checked) .location h2{
-    font-size: 2rem;
+    font-size: 5cqw;
 }
 .more_loc {
     display: none;
@@ -273,13 +273,24 @@ body {
     grid-area: chat;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr 3fr .5fr;
+    grid-template-rows: .2fr 3fr .5fr;
     justify-items: center;
     justify-content: end;
     visibility: visible;
 }
+.current_location{
+    border-bottom: var(--inner_border) solid var(--dark);
+    font-size:4cqw
+}
+.edit{
+    border: calc(var(--inner_border)/2) solid var(--dark);
+    border-radius: .5rem;
+}
 .message_prompt{
     text-align: center;
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 2;
     width:70%;
     margin-bottom: 2rem;
 }
@@ -302,10 +313,16 @@ body {
     display: none;
     visibility: hidden;
 }
+.message_history{
+    grid-column: 1;
+    grid-row: 2;
+    z-index: 1;
+}
 .chat_box{
+    grid-row: -1;
     width: 80%;
     font-size: large;
-    float:right;
+    justify-self: end;
     padding: 12px 20px;
     border: var(--inner_border) solid var(--dark);
     border-radius: 1rem;
