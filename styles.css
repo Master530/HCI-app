@@ -176,6 +176,7 @@ body {
         "hours hours hours hours"
         "hours hours hours hours"
         "hours hours hours hours"
+        "hours hours hours hours"
         "chat2 chat2 chat2 chat2"
         ;
 }
@@ -201,10 +202,31 @@ body {
     visibility: visible;
 }
 .container:has(.location input:checked) .more_loc{
-    display:block;
+    display:flex;
+    font-size: 2cqh;
+
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 1rem;
+    margin:0;
+    text-align: center;
     visibility: visible;
 }
 
+.container:has(.location input:checked) .location h2{
+    font-size: 2rem;
+}
+
+.more_loc {
+    display: none;
+    visibility: hidden;
+    max-width: 90%;
+}
+
+.location:has(input:checked) .more_loc{
+    display: block;
+    visibility: visible;
+}
 
 #iphone-container {
     position: relative;
@@ -459,21 +481,6 @@ body {
     cursor: pointer;
 }
 
-#hoursLocationBox {
-    border: 2px solid black;
-    padding: 10px;
-
-}
-
-.more_loc {
-    display: none;
-    visibility: hidden;
-}
-
-.location:has(input:checked) .more_loc{
-    display: block;
-    visibility: visible;
-}
 
 #hoursLocationBox button {
     width: 100%;
