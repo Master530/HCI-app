@@ -10,16 +10,14 @@
 
     <body>
         <div class="container">
-                <div class="header_item logo" style="align-self: center">
-                    <a href="index.html"><img class="logo" src="images/logo.png" style="max-width: 5rem;"/></a>
+                <div class="header_item back">
+                    <a href="index.html"><img class="back_img" src="images/arrow-back.png" alt="back" /></a>
                 </div>
-                <div class="header_item chat open_chat"><input type="checkbox">
-                    <a href="Chat.html"><img
-                        class="chat"
-                        src="images/messenger.png"
-                        alt="Message icons created by Freepik - Flaticon"
-                        style="float:right; max-width: 1.5rem;"
-                    /></a>
+                <div class="header_item logo" style="align-self: center">
+                    <a href="index.html"><img class="logo_img" alt="Home" src="images/logo.png"></a>
+                </div>
+                <div class="header_item chat open_chat ">
+                    <input type="checkbox" class="clickable">
                 </div>
                 <div class="line header_item"></div>
 
@@ -33,20 +31,19 @@
         </div>
 
         <div class="events"><button class="full"><h2><img src="images/calander.png" style="max-width:2rem; float:left;"/>Events</h2></button></div>
-        <div class="rec_video"><input type="checkbox"/><button class="full"><img src="images/play.png" style="max-width:5rem"/></button></div>
-        <div class="long_chat open_chat"><input type="checkbox">
-            <a href="Chat.html">
-            <div id="pushUp" >
+        <div class="rec_video"><input class="clickable" type="checkbox"/></div>
+        <div class="long_chat open_chat"><input class="clickable" type="checkbox">
 
-                <img class="chatIcons" src="images/messenger.png"style="max-width: 2rem"/>
+                    <div class="long_button">
 
-                <p>Chat With Us</p>
+                        <img class="chatIcons" src="images/messenger.png"style="max-width: 2rem"/>
 
-                <img class="chatIcons" id="chatIcon2" src="images/messenger.png"style="max-width: 2rem" />
+                            <p>Chat With Us</p>
 
-            </div>
+                        <img class="chatIcons" id="chatIcon2" src="images/messenger.png"style="max-width: 2rem" />
 
-            </a>
+                    </div>
+
         </div>
         <div class="full_chat">
             <div class="current_location">
@@ -67,7 +64,7 @@
 
         </div>
         <div id="locaitonDetails" class="location"><input type="checkbox"/>
-            <button class="full"><a href="officeHoursAndLocations.html"><img src="images/clock.jpeg"style="max-width: 1rem"/><h2>Office Hours & Locations</h2>
+            <img src="images/clock.jpeg"style="max-width: 1rem"/><h2>Office Hours & Locations</h2>
             <div class="more_loc">
                 <div>
                     <a target="_blank" href="https://maps.app.goo.gl/HnmQdDLsjmM8MD8j6"><b> Saint Johnsbury:</b><br>
@@ -113,10 +110,10 @@
                     <br>
                     <a target="_blank" href="tel:802-528-1139">(802)-528-1139</a>
                 </div>
-            </div></a></button>
+            </div>
         </div>
         <div class="vids">
-            <button class="full"><a href="officeHoursAndLocations.html"><img src="images/play.png"style="max-width: 1rem"/>Safer Use Videos</a></button>
+            <button class="full"><a href="https://www.youtube.com/@vermontcaresssp8311?app=mobile"><img src="images/play.png"style="max-width: 1rem"/>Safer Use Videos</a></button>
         </div>
         <div class="emergency">
             <button class="full""><a href="tel:123456789">911</a></button> <!-- would be 911 in non-test environment -->
