@@ -314,6 +314,14 @@ body {
 }
 
 /* styles for mobile services expanded */
+.container:has(.rec_video input:checked)
+    .mobile:has(input(:checked))
+    .van
+    .long_button
+    a {
+    display: grid;
+    visibility: visible;
+}
 .container:has(.mobile input:checked) {
     grid-template-areas:
         "left-head logo logo right-head"
@@ -345,6 +353,15 @@ body {
     .mobile .van {
         height: 100%;
         grid-column: 1 / span 3;
+        grid-rows: 2 / span 4;
+    }
+    .mobile .van #mobileServiceBox {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        border: none;
+        background: none;
+        visibility: visible;
     }
     .mobile .van:has(input:not(:checked)) {
         display: none;
@@ -769,6 +786,8 @@ body {
 }
 
 #mobileServiceBox {
+    display: none;
+    visibility: invisible;
     border: 2px solid black;
     padding: 10px;
     background-color: lightskyblue;
