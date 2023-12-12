@@ -42,8 +42,9 @@ body {
 }
 /* header styles */
 .header_item:not(.line){
-    max-height: 100%;
-    max-width: 100%;
+    max-height: 40vmin;
+    max-width: 30vmax;
+    vertical-align: center;
 }
 .back {
     grid-area:left-head;
@@ -95,6 +96,9 @@ body {
 .mobile {
     grid-area: mobile;
     text-align: center;
+    display: grid;
+    justify-items: center;
+    align-items:start;
 }
 
 .mobile h2 {
@@ -104,22 +108,43 @@ body {
 }
 
 .button_group .request{
+    align-self: stretch;
+    border: none;
+    padding-bottom: .5rem;
+    border-radius: 10px;
+    vertical-align: center;
+    display: inline-grid;
     background-color: pink;
     border: calc(var(--inner_border) / 2) solid var(--dark);
     width: 90%;
     margin-top: .1rem;
     padding:0;
-    padding-top: 1rem;
     margin-bottom: 1rem;
+
+    .clickable {
+        display: inline;
+        grid-row: 1;
+            grid-column-start: 1;
+            grid-row-end: -1;
+    }
 }
 
-.button_group button{
+.button_group .van{
+    display: inline-grid;
     border: none;
     width: 100%;
     padding: 0rem;
     padding-bottom: .5rem;
     border-radius: 10px;
     vertical-align: center;
+
+    .clickable {
+        display: inline;
+        grid-row: 1;
+            grid-column-start: 1;
+
+            grid-row-end: -1;
+    }
 }
 
 .button_group a button:not(.request){
@@ -181,23 +206,27 @@ body {
     justify-items: center;
 
     .clickable{
-        grid-row-start: 1;
-        grid-row-end: 3;
+        display: inline;
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-column-end: -1;
+        grid-row-end: -1;
     }
 
-    img{
-        grid-row: 1;
-    }
-    h2 {
-        grid-row: 3;
-    }
 }
 
-.location h2{
+.location img {
+    display: inline-block;
+    grid-row: 1;
+}
+.location p{
     margin: 0;
+    display: inline-block;
     text-align: center;
     font-size: .5rem;
     padding-bottom: 1rem;
+    grid-row: 1;
+    font-size: 2cqw;
 }
 
 .vids {
@@ -256,13 +285,9 @@ body {
         "chat2 chat2 chat2 chat2"
         ;
 }
-.container:has(.location input:checked) > :not(.location){
+.container:has(.location input:checked) > :not(.location, .long_chat){
     display:none;
     visibility: hidden;
-}
-.container:has(.location input:checked) .long_chat{
-    display:block;
-    visibility: visible;
 }
 .container:has(.location input:checked) .header_item{
     display:block;
@@ -279,17 +304,19 @@ body {
     text-align: center;
     visibility: visible;
 }
-.container:has(.location input:checked) .location h2{
+.container:has(.location input:checked) .location p{
     font-size: 5cqw;
+}
+.container:has(.location input:checked) .location .long_button{
+    flex-wrap: wrap;
+    align-items: baseline;
+        align-content: flex-start;
+        justify-content: space-around;
 }
 .more_loc {
     display: none;
     visibility: hidden;
     max-width: 90%;
-}
-.location:has(input:checked) .more_loc{
-    display: block;
-    visibility: visible;
 }
 
 /*Styles for chat view*/
@@ -333,7 +360,7 @@ body {
     display:none;
     visibility: hidden;
 }
-.container:has(.open_chat input:checked) .header_item{
+.container:has(.open_chat input:checked) .header_item:not(.chat){
     display:block;
     visibility: visible;
 }
