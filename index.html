@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <!--links here-->
     <meta charset="UTF-8">
@@ -8,129 +9,184 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-    <body>
-        <div class="container">
-                <div class="header_item back">
-                    <a href="index.html"><img class="back_img" src="images/arrow-back.png" alt="back" /></a>
-                </div>
-                <div class="header_item logo" style="align-self: center">
-                    <a href="index.html"><img class="logo_img" alt="Home" src="images/logo.png"></a>
-                </div>
-                <div class="header_item chat open_chat ">
-                    <input type="checkbox" class="clickable">
-                </div>
-                <div class="line header_item"></div>
+<body>
+    <div class="container">
+        <div class="header_item back">
+            <a href="index.html"><img class="back_img" src="images/arrow-back.png" alt="back" /></a>
+        </div>
+        <div class="header_item logo" style="align-self: center">
+            <a href="index.html"><img class="logo_img" alt="Home" src="images/logo.png"></a>
+        </div>
+        <div class="header_item chat open_chat ">
+            <input type="checkbox" class="clickable">
+        </div>
+        <div class="line header_item"></div>
 
 
         <div class="mobile button_group">
             <h2>Mobile Services </h2>
-            <div class="van"><input class="clickable" type="checkbox"><div class="long_button"><img src="images/green_van.png"/>Burlington</div></div>
+            <div class="van"><input class="clickable" type="checkbox">
+                <div class="long_button"><img src="images/green_van.png" />
+                    <h3>Burlington</h3>
+                </div>
+            </div>
 
-            <div class="van"><input class="clickable" type="checkbox"><div class="long_button"><div eta="15"><img src="images/yellow_van.png"/></div>Barre</div></div>
+            <div class="van"><input class="clickable" type="checkbox">
+                <div class="long_button">
+                    <div eta="15"><img src="images/yellow_van.png" /></div>
+                    <h3>Barre</h3>
+                </div>
+            </div>
 
-            <div class="request open_chat"><input class="clickable" type="checkbox"><div class="long_button">Request Services</div></div>
+            <div class="request open_chat"><input class="clickable" type="checkbox">
+                <div class="long_button">
+                    <h3>Request Services</h3>
+                </div>
+            </div>
         </div>
 
-        <div class="events"><button class="full"><h2><img src="images/calander.png" style="max-width:2rem; float:left;"/>Events</h2></button></div>
-        <div class="rec_video"><input class="clickable" type="checkbox"/></div>
+        <div class="events"><button class="full">
+                <h2><img src="images/calander.png" style="max-width:2rem; float:left;" />Events</h2>
+            </button></div>
+        <div class="rec_video"><input class="clickable" type="checkbox" /></div>
         <div class="long_chat open_chat"><input class="clickable" type="checkbox">
 
-                    <div class="long_button">
+            <div class="long_button">
 
-                        <img class="chatIcons" src="images/messenger.png"style="max-width: 2rem"/>
+                <img class="chatIcons" src="images/messenger.png" style="max-width: 2rem" />
 
-                            <p>Chat With Us</p>
+                <p>Chat With Us</p>
 
-                        <img class="chatIcons" id="chatIcon2" src="images/messenger.png"style="max-width: 2rem" />
+                <img class="chatIcons" id="chatIcon2" src="images/messenger.png" style="max-width: 2rem" />
 
-                    </div>
+            </div>
 
         </div>
 
         <div class="full_chat">
             <div class="current_location">
-                <p>Location: Johnsbury | Hours: 9am - 9pm | <a href="chatLocationChange.html"><button class="edit">Edit</button></a> </p>
+                <div class="stJ town">
+                    <p class="info">Johnsbury | Hours: 9am - 5pm </p>
+                    <button class="edit"><input class="clickable" type="checkbox" checked>
+                        <p class="change">change</p>
+                        <p class="select">select</p>
+                    </button>
+                </div>
+                <div class="rut town">
+                    <p class="info">Rutland | Hours: 9am - 5pm </p>
+                    <button class="edit"><input class="clickable" type="checkbox">
+                        <p class="change">change</p>
+                        <p class="select">select</p>
+                    </button>
+                </div>
+                <div class="bur town">
+                    <p class="info">Burlington | Hours: 9am - 5pm </p>
+                    <button class="edit"><input class="clickable" type="checkbox">
+                        <p class="change">change</p>
+                        <p class="select">select</p>
+                    </button>
+                </div>
+                <div class="stJ town">
+                    <p class="info">Barre | Hours: 9am - 5pm </p>
+                    <button class="edit"><input class="clickable" type="checkbox">
+                        <p class="change">change</p>
+                        <p class="select">select</p>
+                    </button>
+                </div>
             </div>
             <div class="message_history"></div>
-                <div class="message_prompt">
-                    <h3>How may we help?</h3>
-                    <div class="help_options">
-                        <button class="option"><input class="clickable" type="checkbox"  id="narcan"><p>Narcan</p></button>
-                        <button class="option"><input class="clickable" type="checkbox"  id="hivTest"><p>HIV Test</p></button>
-                        <button class="option"><input class="clickable" type="checkbox"  id="testStrips"><p>Test Strips</p></button>
-                        <button class="option"><input class="clickable" type="checkbox" id="sterileSupplies"><p>Sterile Supplies</p></button>
-                    </div>
-                        <button class="send_options" type="submit"><input class="clickable" type="checkbox"><p>Submit</p></button>
+            <div class="message_prompt">
+                <h3>How may we help?</h3>
+                <div class="help_options">
+                    <button class="option"><input class="clickable" type="checkbox" id="narcan">
+                        <p>Narcan</p>
+                    </button>
+                    <button class="option"><input class="clickable" type="checkbox" id="hivTest">
+                        <p>HIV Test</p>
+                    </button>
+                    <button class="option"><input class="clickable" type="checkbox" id="testStrips">
+                        <p>Test Strips</p>
+                    </button>
+                    <button class="option"><input class="clickable" type="checkbox" id="sterileSupplies">
+                        <p>Sterile Supplies</p>
+                    </button>
                 </div>
-                <textarea autofocus class="chat_box" type="text" placeholder="Your message..." rows="4"></textarea>
+                <button class="send_options" type="submit"><input class="clickable" type="checkbox">
+                    <p>Submit</p>
+                </button>
+            </div>
+            <textarea autofocus class="chat_box" type="text" placeholder="Your message..." rows="4"></textarea>
         </div>
 
         <div id="locaitonDetails" class="location">
 
-            <input class="clickable" type="checkbox"/>
+            <input class="clickable" type="checkbox" />
             <div class="long_button">
-                <img src="images/clock.jpeg"style="max-width: 1rem"/>
+                <img src="images/clock.jpeg" style="max-width: 1rem" />
                 <p>Hours & Locations</p>
 
-            <div class="more_loc">
-                <div>
-                    <a target="_blank" href="https://maps.app.goo.gl/HnmQdDLsjmM8MD8j6"><b> Saint Johnsbury:</b><br>
-                        1091 Hospital
-                        Drive, Suite 2,
-                        St. Johnsbury, VT
-                        05819
-                    </a>
-                    <br>
-                    <a target="_blank" href="tel:802-748-9061">(802)-748-9061</a>
+                <div class="more_loc">
+                    <div>
+                        <a target="_blank" href="https://maps.app.goo.gl/HnmQdDLsjmM8MD8j6"><b> Saint Johnsbury:</b><br>
+                            1091 Hospital
+                            Drive, Suite 2,
+                            St. Johnsbury, VT
+                            05819
+                        </a>
+                        <br>
+                        <a target="_blank" href="tel:802-748-9061">(802)-748-9061</a>
 
+                        <br>
+                        <a target="_blank" href="tel:802-448-4989">(802)-448-4989</a>
+                    </div>
                     <br>
-                    <a target="_blank" href="tel:802-448-4989">(802)-448-4989</a>
-                </div>
-                <br>
-                <div>
-                    <a target="_blank" href="https://maps.app.goo.gl/p8XDRUzLwxVodDkN9">  <b> Rutland:</b><br>
-                    131 Woodstock Avenue,
-                    Suite 3, Rutland,
-                    VT 05701
-                </a>
-                    <br>
-                    <a target="_blank" href="tel:802-775-5884">(802)-775-5884</a>
+                    <div>
+                        <a target="_blank" href="https://maps.app.goo.gl/p8XDRUzLwxVodDkN9"> <b> Rutland:</b><br>
+                            131 Woodstock Avenue,
+                            Suite 3, Rutland,
+                            VT 05701
+                        </a>
+                        <br>
+                        <a target="_blank" href="tel:802-775-5884">(802)-775-5884</a>
 
+                        <br>
+                        <a target="_blank" href="tel:802-238-4855">(802)-238-4855</a>
+                    </div>
                     <br>
-                    <a target="_blank" href="tel:802-238-4855">(802)-238-4855</a>
-                </div>
-                <br>
-                <div>
-                    <a target="_blank" href="https://maps.app.goo.gl/WJipgvt6UxmuxtgLA">  <b> Burlington:</b><br>
-                        187 Saint Paul Street,
-                        Burlington,VT 05402
-                    </a>
+                    <div>
+                        <a target="_blank" href="https://maps.app.goo.gl/WJipgvt6UxmuxtgLA"> <b> Burlington:</b><br>
+                            187 Saint Paul Street,
+                            Burlington,VT 05402
+                        </a>
+                        <br>
+                        <a target="_blank" href="tel:802-863-2437">(802)-863-2437</a>
+                    </div>
                     <br>
-                    <a target="_blank" href="tel:802-863-2437">(802)-863-2437</a>
+                    <div>
+                        <a target="_blank" href="https://maps.app.goo.gl/rVKu4VyU7tFzopy87"><b> Barre:</b><br>
+                            51 Church Street,
+                            Barre,VT 05641
+                        </a>
+                        <br>
+                        <a target="_blank" href="tel:802-528-1139">(802)-528-1139</a>
+                    </div>
                 </div>
-                <br>
-                <div>
-                    <a target="_blank" href="https://maps.app.goo.gl/rVKu4VyU7tFzopy87"><b> Barre:</b><br>
-                        51 Church Street,
-                        Barre,VT 05641
-                    </a>
-                    <br>
-                    <a target="_blank" href="tel:802-528-1139">(802)-528-1139</a>
-                </div>
-            </div>
             </div>
         </div>
         <div class="vids">
-            <button class="full"><a href="https://www.youtube.com/@vermontcaresssp8311?app=mobile"><img src="images/play.png"style="max-width: 1rem"/>Safer Use Videos</a></button>
+            <button class="full"><a href="https://www.youtube.com/@vermontcaresssp8311?app=mobile"><img
+                        src="images/play.png" style="max-width: 1rem" />Safer Use Videos</a></button>
         </div>
         <div class="emergency">
-            <button class="full""><a href="tel:123456789">911</a></button> <!-- would be 911 in non-test environment -->
+            <button class="full""><a href=" tel:123456789">911</a></button>
+            <!-- would be 911 in non-test environment -->
         </div>
 
 
-        </div>
     </div>
-        <!-- No content here/below -->
+    </div>
+    <!-- No content here/below -->
     </div>
 </body>
+
 </html>
