@@ -45,26 +45,32 @@
                     </div>
 
         </div>
+
         <div class="full_chat">
             <div class="current_location">
                 <p>Location: Johnsbury | Hours: 9am - 9pm | <a href="chatLocationChange.html"><button class="edit">Edit</button></a> </p>
             </div>
             <div class="message_history"></div>
                 <div class="message_prompt">
-                    <h3>How can we help?</h3>
+                    <h3>How may we help?</h3>
                     <div class="help_options">
-                        <button class="option"><input type="checkbox"  id="narcan">Narcan</button>
-                        <button class="option"><input type="checkbox"  id="hivTest">HIV Test</button>
-                        <button class="option"><input type="checkbox"  id="testStrips">Test Strips</button>
-                        <button class="option"><input type="checkbox" id="sterileSupplies">Sterile Supplies</button>
+                        <button class="option"><input class="clickable" type="checkbox"  id="narcan"><p>Narcan</p></button>
+                        <button class="option"><input class="clickable" type="checkbox"  id="hivTest"><p>HIV Test</p></button>
+                        <button class="option"><input class="clickable" type="checkbox"  id="testStrips"><p>Test Strips</p></button>
+                        <button class="option"><input class="clickable" type="checkbox" id="sterileSupplies"><p>Sterile Supplies</p></button>
                     </div>
-                        <button class="send_options" type="submit"><input type="checkbox">Submit</button>
+                        <button class="send_options" type="submit"><input class="clickable" type="checkbox"><p>Submit</p></button>
                 </div>
                 <textarea autofocus class="chat_box" type="text" placeholder="Your message..." rows="4"></textarea>
-
         </div>
-        <div id="locaitonDetails" class="location"><input type="checkbox"/>
-            <img src="images/clock.jpeg"style="max-width: 1rem"/><h2>Office Hours & Locations</h2>
+
+        <div id="locaitonDetails" class="location">
+
+            <input class="clickable" type="checkbox"/>
+            <div>
+            <img src="images/clock.jpeg"style="max-width: 1rem"/>
+            <h2>Office Hours & Locations</h2>
+            </div>
             <div class="more_loc">
                 <div>
                     <a target="_blank" href="https://maps.app.goo.gl/HnmQdDLsjmM8MD8j6"><b> Saint Johnsbury:</b><br>

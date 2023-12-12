@@ -12,7 +12,7 @@ body {
 }
 
 .clickable{
-    appearance: ;
+    appearance: none;
     display: inline-block;
     opacity: 50%;
     cursor: pointer;
@@ -175,14 +175,27 @@ body {
 
 .location {
     grid-area: hours;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 1fr;
     align-items: center;
+    justify-items: center;
+
+    .clickable{
+        grid-row-start: 1;
+        grid-row-end: 3;
+    }
+
+    img{
+        grid-row: 1;
+    }
+    h2 {
+        grid-row: 3;
+    }
 }
 
 .location h2{
     margin: 0;
+    text-align: center;
     font-size: .5rem;
     padding-bottom: 1rem;
 }
@@ -356,10 +369,16 @@ body {
 
 }
 .option, .send_options{
+    display: inline-grid;
     width: 60%;
     border: var(--inner_border) solid var(--dark);
     border-radius: 1rem;
     margin-bottom: .5rem;
+
+    .clickable, p {
+        grid-row: 1;
+        grid-column: 1;
+    }
 }
 .option:has(input:checked){
     background-color: pink;
