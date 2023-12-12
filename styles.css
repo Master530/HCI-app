@@ -123,6 +123,17 @@ a:visited {
     align-content: space-between;
 }
 
+.mobile_info {
+    display: inline-grid;
+
+    .clickable {
+        display: inline;
+        grid-row: 1;
+        grid-column-start: 1;
+        grid-row-end: -1;
+    }
+}
+
 .mobile h2 {
     margin: 0;
     font-size: 1.5rem;
@@ -175,6 +186,7 @@ a:visited {
 
     .long_button {
         justify-content: space-around;
+
         > a {
             border: calc(var(--inner_border) / 2) solid var(--dark);
             background-color: #fff5ee;
@@ -261,9 +273,11 @@ a:visited {
     grid-row: 1;
     font-size: 3cqmin;
 }
+
 .location .long_button {
     flex-direction: column-reverse;
 }
+
 .clock {
     max-width: 10cqmin;
 }
@@ -297,10 +311,12 @@ a:visited {
         "rec_video rec_video rec_video rec_video"
         "chat2 chat2 chat2 chat2"
         "hours vids vids emergency";
+
     .mobile h2 {
         grid-row: 1;
         grid-column: 1 / span 3;
     }
+
     .mobile .request {
         grid-row: 3;
         grid-column: 1 / span 3;
@@ -312,9 +328,11 @@ a:visited {
             "van town"
             "van street";
     }
+
     .mobile:has(input:checked) .van .long_button {
         display: flex;
     }
+
     .events {
         display: none;
         visibility: hidden;
@@ -327,6 +345,7 @@ a:visited {
     align-content: center;
     justify-content: center;
     grid-column-gap: 1rem;
+
     h2 {
         height: 50%;
         grid-column-start: 1;
@@ -353,6 +372,7 @@ a:visited {
     display: grid;
     visibility: visible;
 }
+
 .container:has(.mobile input:checked) {
     grid-template-areas:
         "left-head logo logo right-head"
@@ -374,19 +394,23 @@ a:visited {
         display: block;
         visibility: visible;
     }
+
     .mobile {
         grid-template-columns: 1fr 1fr 1fr;
 
         grid-template-rows: repeat(3, 1fr);
     }
+
     .mobile h2 {
         grid-column: 1 / span 3;
     }
+
     .mobile .van {
         height: 100%;
         grid-column: 1 / span 3;
         grid-rows: 2 / span 4;
     }
+
     .mobile .van #mobileServiceBox {
         display: grid;
         align-items: center;
@@ -395,13 +419,16 @@ a:visited {
         background: none;
         visibility: visible;
     }
+
     .mobile .van:has(input:not(:checked)) {
         display: none;
         visibility: hidden;
     }
+
     .mobile .van .long_button {
         flex-direction: row;
     }
+
     .mobile .request {
         grid-row: -1;
         grid-column: 1 / span 3;
@@ -450,6 +477,7 @@ a:visited {
     margin: 1rem;
     text-align: center;
     visibility: visible;
+
     > div {
         display: flex;
         flex-direction: column;
@@ -460,6 +488,7 @@ a:visited {
 .container:has(.location input:checked) .location p {
     font-size: 6cqw;
 }
+
 .container:has(.location input:checked) .location .long_button {
     flex-direction: column;
     align-items: center;
@@ -505,10 +534,12 @@ a:visited {
     display: none;
     visibility: hidden;
 }
+
 .container:has(.mobile .van input:checked) .back {
     display: block;
     visibility: visible;
 }
+
 .container:has(.location input:checked) .back {
     display: block;
     visibility: visible;
