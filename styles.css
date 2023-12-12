@@ -280,19 +280,28 @@ body {
         "rec_video rec_video rec_video rec_video"
         "chat2 chat2 chat2 chat2"
         "hours events vids emergency";
-}
+    .mobile h2 {
+        grid-row: 1;
+        grid-column: 1 / span 3;
+    }
+    .mobile .request {
+        grid-row: 3;
+        grid-column: 1 / span 3;
+    }
 
-.container:has(.rec_video input:checked)
-    .mobile:has(input:not(:checked))
-    .van
-    .long_button
-    a {
-    display: none;
-    visibility: hidden;
+    .mobile:has(input:not(:checked)) .van .long_button {
+        display: grid;
+        grid-template-areas:
+            "van town"
+            "van street";
+    }
+    .mobile:has(input:checked) .van .long_button {
+        display: flex;
+    }
 }
 
 .container:has(.rec_video input:checked) .mobile:has(input:not(:checked)) {
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(3, auto);
     height: 90%;
     align-content: center;
     justify-content: center;
@@ -310,6 +319,7 @@ body {
 
     .request {
         height: 50%;
+        grid-column: 1 / span 3;
     }
 }
 
