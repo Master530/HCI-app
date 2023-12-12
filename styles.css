@@ -175,6 +175,11 @@ a:visited {
 
     .long_button {
         justify-content: space-around;
+        > a {
+            border: calc(var(--inner_border) / 2) solid var(--dark);
+            background-color: #fff5ee;
+            border-radius: 2rem;
+        }
     }
 }
 
