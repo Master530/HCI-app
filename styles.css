@@ -25,7 +25,7 @@ body {
     height: 98cqh;
     align-content: stretch;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 0.2fr 0.1fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.2fr 1.2fr;
+    grid-template-rows: 0.2fr 0.1fr 1.2fr 1.2fr 1.2fr 1.2fr 1.2fr 0.5fr 0.5fr;
     grid-template-areas:
         "left-head logo logo right-head"
         "line line line line"
@@ -188,6 +188,7 @@ body {
 
 .events {
     grid-area: events;
+    text-align: center;
 }
 
 .rec_video {
@@ -284,7 +285,7 @@ body {
         "rec_video rec_video rec_video rec_video"
         "rec_video rec_video rec_video rec_video"
         "chat2 chat2 chat2 chat2"
-        "hours events vids emergency";
+        "hours vids vids emergency";
     .mobile h2 {
         grid-row: 1;
         grid-column: 1 / span 3;
@@ -302,6 +303,10 @@ body {
     }
     .mobile:has(input:checked) .van .long_button {
         display: flex;
+    }
+    .events {
+        display: none;
+        visibility: hidden;
     }
 }
 
@@ -487,6 +492,14 @@ body {
 .container:has(.open_chat input:not(:checked)) .back {
     display: none;
     visibility: hidden;
+}
+.container:has(.mobile .van input:checked) .back {
+    display: block;
+    visibility: visible;
+}
+.container:has(.location input:checked) .back {
+    display: block;
+    visibility: visible;
 }
 
 .container:has(.open_chat input:checked) checkbox:not(:checked) {
